@@ -8,12 +8,14 @@ void selection_sort(int *arr,int n)
 	{
 		for(int j = i+1 ;j < n; j++)
 		{
+			int min = i;
 			if(arr[i] > arr[j])
 			{
-				int temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
+				min = j;
 			}
+			int temp = arr[min];
+			arr[min] = arr[i];
+			arr[i] = temp;
 		}
 	}
 }
